@@ -3,6 +3,8 @@ let state = {
 };
 
 function updateFeedback(text, customClass){
+    let popin = document.querySelector('.popin');
+    (text !== '' ? popin.classList.add('reveal') : popin.classList.remove('reveal'));
     document.querySelector('.feedback-container').innerHTML = `<span class='${customClass}'>${text}</span>`;
 }
 

@@ -3,6 +3,7 @@ html, body{
     height:100%;
     background: url(/images/background.png) no-repeat;
     background-size: 100% 100%;
+    position:relative
 }
 
 *{
@@ -36,11 +37,20 @@ header{
     border-radius : 5px;
     font-size : 20px;
     margin-right : 50px;
+    cursor: pointer;
 }
 
 .new-game:hover{
     background-color : #fce060;
     color : black;
+}
+
+.win {
+    color: green;
+}
+
+.lose{
+    color : red;
 }
 
 /*============ OUTCOME ===============*/
@@ -71,9 +81,9 @@ header{
 }
 /*============ FEEDBACK ==============*/
 .feedback-container{
-    height : 50px;
-    line-height : 50px;
-    font-size: 35px;
+    height : 200px;
+    line-height : 200px;
+    font-size: 75px;
     font-family: 'Norican';
 
 }
@@ -85,6 +95,7 @@ header{
     width : 10%;
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 [class*='number-'] img {
@@ -121,4 +132,35 @@ header{
 
 .button.novalid .shadow{
     display: block;
+}
+
+
+/*============ POPIN ================*/
+.popin{
+    position: absolute;
+    width : 700px;
+    left : calc(50% - 350px);
+    top: 100px;
+    height : 300px;
+    background-color: #fcfaca;
+    z-index: 3;
+    border : 5px solid #fce060;
+    border-radius : 10px;
+    text-align : center;
+    display : none;
+}
+
+.popin.reveal{
+    display: block;
+}
+
+.popin button {
+    display: block;
+    margin : auto;
+}
+
+.popin .new-game{
+    background-color : #fce060;
+    color : black;
+    font-size : 40px;
 }
