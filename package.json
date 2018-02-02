@@ -1,0 +1,22 @@
+{
+  "name": "winlose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alixbrunsperger/winlose.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alixbrunsperger/winlose/issues"
+  },
+  "homepage": "https://github.com/alixbrunsperger/winlose#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

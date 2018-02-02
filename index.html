@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Win Lose</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Norican" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button class="new-game" onclick="reinitBoard()">Start a new game</button>
+    </header>
+    <main>
+        <div class="outcome-container">
+            <div class="outcome">
+                <img class="back" src="images/blank.png" />
+                <img class="front" src="images/mystery.png" />
+            </div>
+        </div>
+        <div class="feedback-container">
+        </div>
+        <div class="numbers-container">
+            <span data-value="1" class="number-1" onclick="updateCheckedNumbers(this);">
+                <img src="./images/sym1.png" />
+                <span class="shadow"></span>
+            </span>
+            <span data-value="2" class="number-2" onclick="updateCheckedNumbers(this);">
+                <img src="./images/sym2.png" />
+                <span class="shadow"></span>
+            </span>
+            <span data-value="3" class="number-3" onclick="updateCheckedNumbers(this);">
+                <img src="./images/sym3.png" />
+                <span class="shadow"></span>
+            </span>
+            <span data-value="4" class="number-4" onclick="updateCheckedNumbers(this);">
+                <img src="./images/sym4.png" />
+                <span class="shadow"></span>
+            </span>
+            <span data-value="5" class="number-5" onclick="updateCheckedNumbers(this);">
+                <img src="./images/sym5.png" />
+                <span class="shadow"></span>
+            </span>
+            <span data-value="6" class="number-6" onclick="updateCheckedNumbers(this);">
+                <img src="./images/sym6.png" />
+                <span class="shadow"></span>
+            </span>
+            <span data-value="7" class="number-7" onclick="updateCheckedNumbers(this);">
+                <img src="./images/sym7.png" />
+                <span class="shadow"></span>
+            </span>
+            <span data-value="8" class="number-8" onclick="updateCheckedNumbers(this);">
+                <img src="./images/sym8.png" />
+                <span class="shadow"></span>
+            </span>
+            <span data-value="9" class="number-9" onclick="updateCheckedNumbers(this);">
+                <img src="./images/sym9.png" />
+                <span class="shadow"></span>
+            </span>
+        </div>
+        <div class="button-container">
+            <span class="button novalid">
+                <img src="images/button.png" onclick="submit()" />
+                <span class="shadow"></span>
+            </span>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

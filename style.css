@@ -1,0 +1,121 @@
+html, body{
+    width:100%;
+    height:100%;
+    background: url(/images/background.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+*{
+    color : white;
+}
+
+.outcome-container,
+.feedback-container,
+.numbers-container,
+.button-container{
+    width : 100%;
+    text-align : center;
+}
+
+.shadow{
+    display: none;
+    position : absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.5);
+}
+header{
+    width : 100%;
+    text-align: right;
+}
+
+.new-game{
+    border: 2px solid #fce060;
+    color : #fce060;
+    background-color : transparent;
+    border-radius : 5px;
+    font-size : 20px;
+    margin-right : 50px;
+}
+
+.new-game:hover{
+    background-color : #fce060;
+    color : black;
+}
+
+/*============ OUTCOME ===============*/
+.outcome{
+    width : 270px;
+    margin:auto;
+    height: 270px;
+    text-align : center;
+    position: relative;
+}
+
+.outcome .back{
+    z-index : 1;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.outcome .front{
+    position:absolute;
+    z-index: 2;
+    top: 68px;
+    left:101px;
+}
+.outcome .front.number{
+    top:0;
+    left:0;
+}
+/*============ FEEDBACK ==============*/
+.feedback-container{
+    height : 50px;
+    line-height : 50px;
+    font-size: 35px;
+    font-family: 'Norican';
+
+}
+/*============ NUMBERS ===============*/
+
+[class*='number-']{
+    box-sizing: border-box;
+    margin : 5px;
+    width : 10%;
+    position: relative;
+    display: inline-block;
+}
+
+[class*='number-'] img {
+    width : 100%;
+}
+
+[class*='number-'] .shadow{
+    width: 144px;
+    height: 144px;
+    border-radius: 16px;
+}
+
+[class*='number-'].noselect .shadow{
+    display: block;
+}
+/*============ BUTTON ================*/
+
+.button-container{
+    margin-top: 35px;
+}
+.button{
+    display: inline-block;
+    position:relative;
+    width : 165px;
+}
+.button .shadow{
+    width: 164px;
+    height: 142px;
+    border-radius: 71px;
+}
+
+.button.novalid .shadow{
+    display: block;
+}
