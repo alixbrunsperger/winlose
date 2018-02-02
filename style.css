@@ -108,11 +108,14 @@ header{
 .button{
     display: inline-block;
     position:relative;
-    width : 165px;
+}
+
+.button img{
+    width : 250px;
 }
 .button .shadow{
-    width: 164px;
-    height: 142px;
+    width: 249px;
+    height: 94px;
     border-radius: 71px;
 }
 
