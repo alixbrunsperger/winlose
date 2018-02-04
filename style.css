@@ -1,21 +1,33 @@
 html, body{
     width:100%;
     height:100%;
-    background: url(/images/background.png) no-repeat;
+    background: url(./images/background.jpg) no-repeat;
     background-size: 100% 100%;
     position:relative
 }
 
 *{
     color : white;
+    font-family: 'Minecraft';
 }
 
-.outcome-container,
+@font-face {
+    font-family: 'Minecraft';
+    src: url('font/Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.header,
 .feedback-container,
 .numbers-container,
 .button-container{
     width : 100%;
     text-align : center;
+}
+
+.header{
+    text-align:left;
 }
 
 .shadow{
@@ -25,70 +37,88 @@ html, body{
     left: 0;
     background-color: rgba(0,0,0, 0.5);
 }
-header{
+
+.hidden{
+    display: none;
+}
+
+.header{
     width : 100%;
-    text-align: right;
+    text-align: left;
 }
 
-.new-game{
-    border: 2px solid #fce060;
-    color : #fce060;
-    background-color : transparent;
-    border-radius : 5px;
-    font-size : 20px;
-    margin-right : 50px;
-    cursor: pointer;
-}
-
-.new-game:hover{
-    background-color : #fce060;
-    color : black;
-}
-
-.win {
-    color: green;
-}
-
-.lose{
-    color : red;
+/*============ RULE ===============*/
+.rule{
+    width : 25%;
+    height: 150px;
+    padding-top : 50px;
+    text-align : center;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size : 24px;
 }
 
 /*============ OUTCOME ===============*/
+.outcome-container{
+    text-align : center;
+    width : 50%;
+    display: inline-block;
+    vertical-align : top;
+}
 .outcome{
-    width : 270px;
+    width : 240px;
     margin:auto;
-    height: 270px;
+    height: 240px;
     text-align : center;
     position: relative;
 }
-
 .outcome .back{
     z-index : 1;
     position: absolute;
     top:0;
     left:0;
+    width : 100%;
 }
 
 .outcome .front{
     position:absolute;
     z-index: 2;
-    top: 68px;
-    left:101px;
+    top: 59px;
+    left: 85px;
+    width : 35%;
 }
 .outcome .front.number{
     top:0;
     left:0;
+    width: 240px;
 }
 /*============ FEEDBACK ==============*/
 .feedback-container{
-    height : 200px;
-    line-height : 200px;
+    height : 150px;
+    line-height : 150px;
     font-size: 75px;
-    font-family: 'Norican';
+}
+.feedback-container img {
+    width : 150px;
+    vertical-align : middle;
+}
+.feedback-container *{
+    font-family: 'Minecraft';
+}
 
+.win {
+    color: #002d3b;
+}
+
+.lose{
+    color : #d188bf;
+}
+.win,
+.lose {
+    display:inline-block;
 }
 /*============ NUMBERS ===============*/
-
 [class*='number-']{
     box-sizing: border-box;
     margin : 5px;
@@ -116,51 +146,64 @@ header{
 .button-container{
     margin-top: 35px;
 }
-.button{
-    display: inline-block;
+.button-play,
+.button-new{
+    display: block;
+    margin: auto;
     position:relative;
+    background: url(./images/cadre.png);
+    background-size: 100% 100%;
+    width: 250px;
+    height: 80px;
+    line-height: 92px;
+    font-size : 50px;
+    text-align : center;
+    cursor: pointer;
 }
 
-.button img{
+.button-play img{
     width : 250px;
 }
-.button .shadow{
-    width: 249px;
-    height: 94px;
-    border-radius: 71px;
-}
 
-.button.novalid .shadow{
-    display: block;
-}
-
-
-/*============ POPIN ================*/
-.popin{
-    position: absolute;
-    width : 700px;
-    left : calc(50% - 350px);
-    top: 100px;
-    height : 300px;
-    background-color: #fcfaca;
-    z-index: 3;
-    border : 5px solid #fce060;
-    border-radius : 10px;
-    text-align : center;
-    display : none;
-}
-
-.popin.reveal{
-    display: block;
-}
-
-.popin button {
-    display: block;
-    margin : auto;
-}
-
-.popin .new-game{
-    background-color : #fce060;
+.button-play .text,
+.button-new .text{
+    display:inline-block;
     color : black;
-    font-size : 40px;
 }
+.button-play .text,
+.button-play .shadow{
+    width: 250px;
+    height: 80px;
+}
+.button-play .shadow{
+    border-radius: 25px;
+}
+
+.button-play.novalid .shadow{
+    display: block;
+}
+
+.button-new {
+    margin-top: 35px;
+    font-size: 35px;
+}
+
+/*============ ANIMATION ================*/
+.fade-in {
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1.5s;
+    -moz-animation-duration:1.5s;
+    animation-duration:1.5s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
